@@ -1,0 +1,285 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  margin-top: 20px;
+}
+
+.snapLogo {
+  width: 84px;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+
+/* snap logo */
+.navLeft img {
+  align-self: center;
+  vertical-align: middle;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+ul > li {
+  display: block;
+  font-size: 14px;
+  position: relative;
+}
+
+ul > li > ul > li {
+  padding: 10px 10px;
+  width: 125px;
+}
+
+ul > li > a {
+  color: hsl(0, 0%, 41%);
+  display: block;
+  text-decoration: none;
+}
+
+ul ul {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: 0;
+  padding: 14px 0px 14px 14px;
+  z-index: 1;
+}
+
+.topLevel {
+  border-bottom: 20px solid hsl(0, 0%, 98%); /* invisible gap between menu and dropdown */
+  border-top: 15px solid hsl(0, 0%, 98%);
+  margin-left: 40px;
+}
+
+/*  */
+.featuresDropdown {
+  display: none;
+  position: absolute;
+  left: -66px;
+  top: 36px;
+  width: 160px;
+}
+
+.features:hover .featuresDropdown {
+  display: block;
+}
+
+.featuresDropdown:hover {
+  display: block;
+}
+
+.companyDropdown {
+  display: none;
+  position: absolute;
+  top: 36px;
+  width: 120px;
+}
+
+.company:hover .companyDropdown {
+  display: block;
+}
+
+.company:hover {
+  display: block;
+}
+/*  */
+
+.icons {
+  margin-right: 10px;
+  width: 14px;
+}
+
+.navLeft a:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+/* BUTTONS */
+.loginBTN {
+  all: unset;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+.loginBTN:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.registerBTN {
+  all: unset;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 14px;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.registerBTN:hover {
+  border: 2px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+
+.mobileHeader {
+  display: none;
+}
+
+.menuClose {
+  display: none;
+}
+
+/********************* MEDIA QUERIES *********************/
+@media (max-width: 1400px) {
+  .navGroup {
+    position: relative;
+  }
+
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 18px;
+  }
+
+  .mobileHeader img {
+    align-self: center;
+  }
+
+  .menuHamburger {
+    cursor: pointer;
+  }
+
+  .menuClose {
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .nav {
+    /* display: none;  */
+    background: hsl(0, 0%, 98%);
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    margin-top: 0;
+    max-height: 100vh;
+    width: 240px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .navLeft {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  .snapLogo {
+    display: none;
+  }
+
+  .topLevel {
+    margin-left: 0;
+    border-bottom: none; /* invisible gap between menu and dropdown */
+    border-top: none;
+    margin-left: none;
+  }
+
+  ul {
+    box-shadow: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-left: 0;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  ul > li {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  ul > li:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  ul > li > ul > li {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  ul > li > ul > li > a {
+    width: 100%;
+  }
+  ul > ul {
+    width: 100%;
+  }
+
+  .navRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topLevel {
+    background: hsl(0, 0%, 98%);
+    width: 100%;
+  }
+
+  .featuresDropdown {
+    background: hsl(0, 0%, 98%);
+    box-shadow: none;
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  .companyDropdown {
+    background: hsl(0, 0%, 98%);
+    box-shadow: none;
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  /* .features:hover .featuresDropdown {
+    display: none;
+  } */
+
+  /* Buttons */
+  .loginBTN {
+    cursor: pointer;
+    text-align: center;
+    margin: 40px 0 16px 0;
+    width: 100%;
+  }
+  .registerBTN {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 170px;
+  }
+}
